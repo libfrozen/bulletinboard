@@ -89,6 +89,15 @@ function receiver(event_name,localNetworkCard,remoteAddress,port,distance,payloa
   end
 end
 
+--[[ function simplify(string)
+   local simplified = string.sub(string,1,6)
+   return simplified
+end ]]
+   
+--[[ function receiver(event_name,localNetworkCard,remoteAddress,port,distance,payload)
+print("[" .. simplify(remoteaddress) .. "..." .. "]" .. tostring(payload)
+end ]]
+
 while true do
 receiver(event.pull("modem_message"))
 end
